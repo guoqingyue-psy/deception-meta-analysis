@@ -1,20 +1,43 @@
-# Deception Meta-Analysis
+# Deception Meta-Analysis｜测谎文献探索
 
-A research project exploring meta-analysis methods in deception detection.
+目前处于文献初读和选题探索阶段，具体研究问题、最终纳入标准与分析方案尚未确定。
 
-## Research Goals
+## 研究目标
 
-- Review deception detection literature.
-- Develop a literature coding system.
-- Compare different deception detection methods.
-- Explore potential moderators of detection accuracy.
+- 阅读欺骗检测相关文献，理解不同任务、测量指标和解释边界。
+- 建立便于比较的文献记录与编码方式。
+- 探索可比较的结果与候选调节变量，再决定后续研究方向。
 
-## Tools
+七篇文献是探索期阅读池，不是系统综述的最终纳入清单，也不限定后续只研究反应时、CIT或某一种生理指标。
 
-- Python
-- pandas
-- openpyxl
+## 当前进度
 
-## Status
+最近同步：2026-10-20（Asia/Shanghai）。来源为 Google Sheets「测谎元分析｜文献阅读卡片」的文献总览、两篇阅读卡片及「日计划_10月19日调整」。本次同步未重新核验论文全文。
 
-Project initialization.
+| 文献 | 阅读进度 | 核对状态 |
+|---|---|---|
+| 01 Suchotzki et al. (2017) | 总览标为已读；两个任务块已勾选，已记录方法、结果、局限及四类范式 | C10:C14等AI代整内容待本人核对，部分计时设置仍待核实 |
+| 02 Meijer et al. (2014) | 阅读中；C15:C17已填 | C18:C19及后续方法、结果等核心回答待填写；已填不等于已逐项核验 |
+| 03–07 | 总览均为待读 | 未核对 |
+
+## 从哪里看
+
+- [七篇文献总览](literature/literature_index.csv)：基本信息、阅读状态、现有摘要及核对状态。
+- [两篇阅读记录与待核对项](literature/reading_notes.md)：保留现有理解、原文定位、本人疑问和AI整理标记。
+- [最小记录字段](docs/coding_fields.md)：适用于探索期的字段与填写规则，后续可以调整。
+
+Sheets用于继续填写和安排日程；GitHub保留带日期的研究快照。本次是一次手动同步，后续Sheets改动不会自动进入仓库。各文件保留来源工作表和单元格定位，不改变原表内容。
+
+## 下一步计划
+
+以下为10月20日晚原计划中的安排，尚未执行，不计作完成进度；具体时间以Sheets后续调整为准。
+
+- 10月21日：从第二篇C18:C19继续，随后完成方法、编码、结果与局限；再推进第四篇klein Selle et al. (2016)。
+- 10月22日：对第一、二、四篇作简短比较，补查影响理解的缺项。
+- 至10月31日：继续七篇探索阅读与比较，再整理2–3个候选研究问题。
+
+当前本人明确提出的线索是「ADCAT四个成分如何在实验中区分或分别检验」，尚未确认研究空白。
+
+## 工具与后续工作
+
+原项目列出的工具为Python、pandas和openpyxl。目前主分支保存文献记录与字段说明；本次未同步分析脚本、Excel编码模板或测试报告。早先对话曾提及的本地程序与「6项测试通过」尚未取得原文件复核，不能当作当前仓库已有功能。
