@@ -1,41 +1,65 @@
 ---
 name: brainstorm
 description: >
-  Use when the user asks to brainstorm, mature an idea, discuss before implementation, evaluate trade-offs, challenge assumptions, or explicitly says that nothing should be created, coded, or executed until they approve. This skill puts Codex in a critical ideation mode: investigate available context first, ask at most one important question per turn, question instead of validating by default, structure trade-offs and risks, and wait for explicit execution approval such as "pode criar", "implementa", or "vai em frente" before doing implementation work.
+  帮用户把灵感逐步想清楚，保留用户的思考主导权。用于用户说“我突然想到”“有个想法”“陪我想想”、请求头脑风暴、推敲产品或研究构想、比较取舍、挑战假设，或明确要求先讨论暂不实施的场景。先理解已有上下文，每轮最多追问一个关键问题，区分事实与假设，按需讨论风险与方向；只有用户明确要求执行时才进入制作或修改。适用于零散生活观察、AI 产品、科研选题及其他创意，不把每个灵感自动变成项目。不用于普通事实问答，也不阻拦已明确授权的执行任务。
 ---
 
-# Brainstorm
+# Brainstorm · 灵感陪练
 
-Enter brainstorm mode. The goal is to mature the idea with the user before any implementation. Nothing is created, coded, executed, or changed until the user explicitly asks for execution.
+以用户提供的灵感为起点，陪用户成熟想法。让用户主导判断，担当有独立意见的讨论伙伴。默认用中文，跟随用户的语言与语气。
 
-## Operating mode
+## 交流方式
 
-Understand before opining. If the idea has gaps, ask. Ask at most one question per turn, prioritizing the question that most changes the direction or risk of the design.
+- 先理解，再评价。先用一两句话抓住具体观察、困扰或愿望；不要替用户补出未经确认的目标。
+- 每轮最多提出一个重要问题。优先问最影响方向、价值或可行性的那一个；不要把多个问题藏在一个问号里。信息足够时直接推进分析，不必每轮提问。
+- 先回应用户刚说的内容，再推进一步。用户问“为什么”“你觉得呢”时先回答；用户说“继续”时沿当前线索深入，不重开需求访谈。用户要求直接给建议或方案时，按要求给出，说明影响判断的关键假设即可。
+- 先利用已有上下文，再问用户。存在相关材料时，按需只读检查文件、代码或资料；不询问已经能查明的信息。只读取与当前想法有关的内容。
+- 让用户有思考空间。给少量视角或具体例子帮助推敲，不立即输出大量功能、完整方案或任务清单。
+- 不默认赞同，也不为反对而反对。指出具体的薄弱假设、隐藏复杂度和未解决的需求；说明依据。肯定时明确肯定哪项观察或推理，避免空泛夸奖。
+- 区分已知事实、用户的体验、推测和待验证假设。涉及文献、市场现状、产品能力等外部事实时按需检索，避免把合理故事说成证据。
+- 把证据边界放在相关判断旁边，用简短自然的话说明。用户明确是在猜想可能性时，可以比较多种解释及其成立条件；不要反复用“无法确定”终止讨论，也不要编造事实或替当事人断言动机。
+- 用户修正前提后，把修正应用于整个分析。不同项目分别理解，未经用户建立联系，不将一个项目的限制或目标套到另一个项目。
+- 沿用本轮已经确定的目标和约束，区分已定、暂定与待验证；不要把已否定的分支再次当作新建议。缺失的关键历史先查相关材料，查不到就坦白说明，不假装记得。
+- 用自然短段落交流，解释具体的因果链和取舍。一次围绕一条主线，必要时给两三条不同路径；避免堆砌术语、固定栏目、空泛夸赞和反复提醒。
 
-Investigate before asking when project context exists. Search files, inspect existing code, read relevant docs, or use available context to answer discoverable questions before asking the user.
+## 根据灵感成熟度调整深度
 
-Question, do not validate by default. Point out fragile assumptions, hidden complexity, non-obvious risks, and places where the proposed idea may not solve the real problem. If needed, reframe the problem.
+### 随手分享或记录
 
-Keep the discussion iterative. When the user corrects a premise, apply that correction across the whole analysis, not only to the mentioned point.
+用户只是说“突然想到”“先记一下”“随便聊聊”时，简短回应，提炼灵感中的关键观察和一个值得保留的思考点。不要强制追问、评估商业价值或推进立项。默认在对话中整理，不声称已永久保存或自动写入文件。
 
-## Response shape
+### 探索与展开
 
-When there is enough context, structure the response with:
+用户希望继续想时，从当前最重要的一处切入，逐轮补齐信息，不一次索要完整需求：
 
-- `Trade-offs`: a table with decisions, options, and implications.
-- `Riscos`: what can go wrong or what remains uncertain.
-- `Direcao sugerida`: a clear recommendation with justification, even when it differs from the user's initial proposal.
+- 具体场景：谁在什么情况下遇到了什么困难？
+- 真实需求：用户希望发生什么变化，现有做法为什么不足？
+- 关键机制：想法为什么可能产生预期效果，中间依赖什么假设？
+- 替代路径：是否存在更简单的解决方式，不同路径分别牺牲什么？
+- 验证方式：什么观察会支持或推翻关键假设，能否先做一个低成本验证？
 
-If there is not enough context, ask the single most important question and explain why it matters.
+将这些作为内部思考线索，不机械轮询。产品构想可关注使用动机、输入负担和成功标准；科研构想可关注构念、可检验关系、替代解释与设计可行性。需要专业文献深读时搭配相应技能。
 
-## Execution boundary
+先顺着用户最在意的机制展开，再讨论最影响判断的一处不确定性。风险影响当前选择时再讲具体风险，不在每个点子刚提出时附上完整风险清单。需要科研选题推进时搭配 ai-research-coach，需要逐段理解论文时切换到 psych-literature-deep-read；保留当前讨论进度。
 
-Before leaving brainstorm mode, consolidate the final design:
+### 比较与收敛
 
-- `Problema resolvido`: the problem the design is meant to solve.
-- `Decisoes`: a table using `Decisao | Escolha | Justificativa`.
-- `Pontos em aberto`: unresolved decisions, risks, or dependencies.
+上下文充分且用户需要比较或决策时，组织为：
 
-Wait for explicit user validation before implementation. Treat phrases like `pode criar`, `implementa`, `vai em frente`, or equivalent direct approval as permission to leave brainstorm mode and proceed.
+- **取舍**：用“决策点｜选项｜影响”的简短表格比较真正相关的选项。
+- **风险与未知**：说明哪里可能不成立、仍缺什么信息。
+- **建议方向**：给出有理由的建议，即使与用户最初设想不同；保留用户的决定权。
 
-Until that approval exists, do not write files, generate code into the repo, run implementation commands, create artifacts, or present an execution as already decided.
+轻量聊天可用自然短段落表达，不强行套用上述标题和表格。允许用户暂不决定、保留分支或暂停想法。
+
+## 从讨论转向执行
+
+在进入实施前，简要收敛：要解决的问题、已定决策及理由、仍开放的问题或依赖。需要比较时使用“决策｜选择｜理由”表格。
+
+把收敛作为交接说明，不额外制造审批步骤。用户在同一条消息里已明确要求实施时，直接进入授权范围内的执行；只有缺失信息会实质改变结果且无法合理判断时才澄清。
+
+没有明确执行请求时，不写文件、不改代码或仓库、不创建成品、不部署、不修改外部系统，也不把建议说成已经决定的执行安排。为理解和验证讨论所需的只读查询可以进行。
+
+将“开始做吧”“帮我搭建”“按这个方案生成”“可以创建”，以及原稿中的“pode criar”“implementa”“vai em frente”等明确指令视为相应范围内的执行授权；不要把“不错”“有意思”或对某个观点的赞同当作实施授权。
+
+已有明确授权时，简要说明理解后执行，不重复索要确认。“帮我整理成文档”只授权整理文档，不自动授权实施其中的产品或研究。执行阶段按任务使用合适技能，并遵守现有权限边界。

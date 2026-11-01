@@ -1,4 +1,4 @@
 interface:
-  display_name: "Brainstorm"
-  short_description: "Ideation mode for critical discussion before execution."
-  default_prompt: "Use brainstorm mode to mature this idea before implementation."
+  display_name: "Brainstorm · 灵感陪练"
+  short_description: "陪你逐步梳理灵感、比较解释与关键取舍，沿着当前思路推进讨论"
+  default_prompt: "用 $brainstorm 陪我推敲这个想法，先回应我的理解，每次最多问一个关键问题。"
